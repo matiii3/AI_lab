@@ -1,0 +1,37 @@
+(define (problem hanoi)
+(:domain hanoi1)
+(:objects 
+    z y x - palik
+    k1 k2 k3 k4 k5 - krag   
+)
+(:init
+    (palik z)
+    (palik y)
+    (palik x)
+    (krazek k1 x)
+    (krazek k2 x)
+    (krazek k3 x)
+    (krazek k4 x)
+    (krazek k5 x)
+    (wiekszy k2 k1)
+    (wiekszy k3 k2)
+    (wiekszy k4 k3)
+    (wiekszy k5 k4)
+    ;(forall (?k ?l)(imply(and(wiekszy ?k ?m)(wiekszy ?m ?l))(wiekszy ?k ?l)))
+    (wiekszy k3 k1)
+    (wiekszy k4 k2)
+    (wiekszy k5 k3)
+    (wiekszy k4 k1)
+    (wiekszy k5 k1)
+    (wiekszy k5 k2)
+
+
+)
+(:goal (and
+    (krazek k1 z)
+    (krazek k2 z)
+    (krazek k3 z)
+    (krazek k4 z)
+    (krazek k5 z)
+))
+)
